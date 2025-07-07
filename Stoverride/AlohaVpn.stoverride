@@ -1,0 +1,16 @@
+name: AlohaVPN
+desc: by aleoo
+http:
+  mitm:
+    - api.alohaprofile.com
+  script:
+    - match: ^https:\/\/api\.alohaprofile\.com\/v\d\/(profile_info|subscription_postback|profile_oauth)
+      name: AlohaVPN
+      type: response
+      require-body: true
+      timeout: 10
+
+script-providers:
+  AlohaVPN:
+    url: https://raw.githubusercontent.com/aleotoidayy/nghluan/aleoo/aloha.js
+    interval: 86400
