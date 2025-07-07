@@ -1,0 +1,24 @@
+name: Picsart
+desc: by aleoo
+http:
+  mitm:
+    - api.revenuecat.com
+    - buy.itunes.apple.com
+    - api.picsart.com
+  script:
+    - match: https://api.picsart.com/gw-v2/shop/subscription/apple/purchases
+      name: PicsartSub
+      type: request
+      require-body: true
+      timeout: 5
+
+script-providers:
+  PicsartSub:
+    url: https://raw.githubusercontent.com/aleotoidayy/nghluan/aleoo/picsart.js
+    interval: 86400
+
+header-rewrite:
+  - match: ^https://api\.(picsart|meiease)\.c(n|om)/users/show/me\.json
+    action: header-del
+    name: PicsartRewrite
+    header: if-none-match
