@@ -1,0 +1,16 @@
+name: Nicegram
+desc: by aleoo
+http:
+  mitm:
+    - nicegram.cloud
+  script:
+    - match: ^https?:\/\/(nicegram\.cloud\/api\/v\d\/user\/info|restore-access\.indream\.app\/restoreAccess)
+      name: Nicegram
+      type: response
+      require-body: true
+      timeout: 10
+
+script-providers:
+  Nicegram:
+    url: https://raw.githubusercontent.com/aleotoidayy/nghluan/aleoo/nicegram.js
+    interval: 86400
