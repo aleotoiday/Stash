@@ -1,0 +1,16 @@
+name: 1Blocker
+desc: by aleoo
+http:
+  mitm:
+    - "api.revenuecat.com"
+  script:
+    - match: https://api.revenuecat.com/v1/subscribers
+      name: 1blocker
+      type: response
+      require-body: true
+      timeout: 10
+
+script-providers:
+  1blocker-script:
+    url: https://raw.githubusercontent.com/aleotoidayy/nghluan/aleoo/blocker.js
+    interval: 86400
