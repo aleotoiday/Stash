@@ -1,0 +1,16 @@
+name: CamScanner
+desc: by aleoo
+http:
+  mitm:
+    - "ap*.intsig.net"
+  script:
+    - match: https://(api|api-cs.*).intsig.net/purchase/cs/query_property?
+      name: CamScanner
+      type: response
+      require-body: true
+      timeout: 10
+
+script-providers:
+  CamScanner:
+    url: https://raw.githubusercontent.com/aleotoidayy/nghluan/aleoo/camscanner.js
+    interval: 86400
