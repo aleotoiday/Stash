@@ -1,0 +1,16 @@
+name: AdGuardPremium
+desc: by aleoo
+http:
+  mitm:
+    - mobile-api.adguard.org
+  script:
+    - match: ^https?:\/\/mobile-api\.adguard\.org\/api\/.+\/ios_validate_receipt
+      name: AdGuard
+      type: response
+      require-body: true
+      timeout: 10
+
+script-providers:
+  AdGuard:
+    url: https://raw.githubusercontent.com/aleotoidayy/nghluan/aleoo/adguard.js
+    interval: 86400
