@@ -1,0 +1,15 @@
+name: Calm
+desc: by aleoo
+http:
+  mitm:
+    - "api.calm.com"
+  script:
+    - match: https://api.calm.com/(me|device|ios/receipt)
+      name: calm
+      type: response
+      require-body: true
+      timeout: 10
+script-providers:
+  calm:
+    url: https://raw.githubusercontent.com/aleotoidayy/nghluan/aleoo/calm.js
+    interval: 86400
