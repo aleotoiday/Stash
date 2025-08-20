@@ -34,6 +34,7 @@ proxy-groups:
       - Việt Nam
       - Nhật Bản
       - Singapore
+      - Mỹ
       - DIRECT
 
   - name: Việt Nam
@@ -60,5 +61,13 @@ proxy-groups:
     interval: 300
     lazy: true
 
+  - name: Mỹ
+    type: select
+    icon: https://raw.githubusercontent.com/aleotoiday/Stash/main/Anh/my.png
+    use: [VPN]
+    filter: "🇺🇸"
+    interval: 300
+    lazy: true
+    
 rules:
   - MATCH,🍓 Auto Select
