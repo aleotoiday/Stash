@@ -12,5 +12,5 @@ http:
 
 script-providers:
   1blocker-script:
-    url: https://raw.githubusercontent.com/aleotoidayy/nghluan/aleoo/blocker.js
+    url: https://raw.githubusercontent.com/aleotoiday/Stash/main/Script/1blocker.js
     interval: 86400
